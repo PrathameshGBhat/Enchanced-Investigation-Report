@@ -9,6 +9,18 @@
 
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .boxy-status {
+        border: 2px solid green; /* Green border */
+        background-color: #d4f8d4; /* Light green background */
+        border-radius: 5px; /* Slightly rounded corners */
+        padding: 5px; /* Padding inside the box */
+        text-align: center; /* Center the text */
+        font-weight: bold; /* Make the text bold */
+        color: green; /* Green text color */
+        display: inline-block; /* Ensures the box wraps tightly around the text */
+      }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,23 +69,10 @@
                   <div class="col-xs-9 case_desc"></div>
                 </div>
                 <br />
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-success approve"
-                    data-id="{{reportId}}"
-                    onclick="App.approve()"
-                  >
-                    Approve
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-danger decline"
-                    data-id="{{reportId}}"
-                    onclick="App.decline()"
-                  >
-                    Decline
-                  </button>
+                <div class="row">
+                  <div class="col-xs-2">Status</div>
+                  <div class="col-xs-1">-</div>
+                  <div class="col-xs-9 case_status boxy-status">Accepted</div>
                 </div>
               </div>
             </div>
